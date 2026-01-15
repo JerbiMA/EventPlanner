@@ -201,6 +201,33 @@ chmod -R 775 storage bootstrap/cache
 # Windows (run as administrator if needed)
 # Usually not required on Windows development
 ```
+
+## Deployment to GitHub
+
+This project is ready to be pushed to GitHub. Follow these steps:
+
+1. Create a new repository on GitHub (https://github.com/new)
+   - Choose a repository name (e.g., `eventplanner`)
+   - Don't initialize with README, .gitignore, or license (already included)
+
+2. Link your local repository to GitHub:
+```bash
+git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+```
+
+3. Push your code to GitHub:
+```bash
+git branch -M main
+git push -u origin main
+```
+
+4. Update the README clone URL after pushing to reflect your actual repository URL.
+
+### Important Notes for GitHub
+- The `.env` file is not included in version control (security best practice)
+- `vendor/` and `node_modules/` directories are ignored
+- Contributors will need to run `composer install` and `npm install` after cloning
+- Make sure to update your `.env` file configuration after cloning
 ```bash
 php artisan storage:link
 ```
